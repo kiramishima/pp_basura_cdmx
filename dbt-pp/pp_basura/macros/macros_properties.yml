@@ -1,0 +1,12 @@
+version: 2
+
+macros:
+  - name: transform_to_polygon
+    description: >
+      Esta macro convierte el tipo de dato TEXT a POLYGON
+    arguments:
+      - name: geometry
+        type: text
+        description: > 
+          geometry.
+          TEXTO que convertiremos a POLYGON

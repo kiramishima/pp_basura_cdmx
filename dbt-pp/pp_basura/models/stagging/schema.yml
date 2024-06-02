@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: stagging
+    schema: 'cdmx_monitor'
+    tables:
+      - name: bronce_contaminacion_agua # -> silver_contaminacion_agua
+      - name: bronce_derrames_quimicos # -> silver_derrames_quimicos
+      - name: bronce_rama # -> silver_rama
+      - name: bronce_redma # -> silver_redman
+      - name: bronce_reportes_paot # -> silver_reportes_paot
+      - name: bronce_rios_cdmx # -> silver_rios_cdmx
+      - name: bronce_tiraderos_clandestinos # -> silver_tiraderos_clandestinos

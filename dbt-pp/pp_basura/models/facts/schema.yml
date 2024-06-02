@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: gold
+    schema: 'cdmx_monitor'
+    tables:
+      - name: fact_tiraderos_clandestinos
+      - name: fact_reportes_paot
+      - name: fact_stats_redma_rama_by_year
+      - name: fact_stats_redma_rama_by_month_year

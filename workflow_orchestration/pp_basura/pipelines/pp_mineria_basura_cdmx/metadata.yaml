@@ -1,0 +1,496 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - transform_data_rios
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ingesta_datos_rios_cdmx
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: ingesta_datos_rios_cdmx
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - carga_datos_rios
+  - carga_datos_pq_rios
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: transform_data_rios
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - ingesta_datos_rios_cdmx
+  uuid: transform_data_rios
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: carga_datos_pq_rios
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transform_data_rios
+  uuid: carga_datos_pq_rios
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: carga_datos_rios
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transform_data_rios
+  uuid: carga_datos_rios
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - transform_datos_rama
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ingesta_datos_RAMA
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: ingesta_datos_rama
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - carga_datos_rama
+  - carga_datos_pq_rama
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: transform_datos_rama
+  retry_config: null
+  status: updated
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - ingesta_datos_rama
+  uuid: transform_datos_rama
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: carga_datos_pq_rama
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transform_datos_rama
+  uuid: carga_datos_pq_rama
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: carga_datos_rama
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transform_datos_rama
+  uuid: carga_datos_rama
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - transform_datos_reportes_paot
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ingesta_datos_reportes_PAOT
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: ingesta_datos_reportes_paot
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - carga_datos_reportes_paot
+  - carga_datos_rep_paot_pq
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: transform_datos_reportes_paot
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - ingesta_datos_reportes_paot
+  uuid: transform_datos_reportes_paot
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: carga_datos_rep_paot_pq
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transform_datos_reportes_paot
+  uuid: carga_datos_rep_paot_pq
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: carga_datos_reportes_paot
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transform_datos_reportes_paot
+  uuid: carga_datos_reportes_paot
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - transformacion_derrames_quimicos
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ingesta_derrames_quimicos_cdmx
+  retry_config: {}
+  status: executed
+  timeout: '300'
+  type: data_loader
+  upstream_blocks: []
+  uuid: ingesta_derrames_quimicos_cdmx
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - carga_datos_derrames_qumicos
+  - carga_datos_pq_derrames_quimicos
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: transformacion_derrames_quimicos
+  retry_config: {}
+  status: executed
+  timeout: '300'
+  type: transformer
+  upstream_blocks:
+  - ingesta_derrames_quimicos_cdmx
+  uuid: transformacion_derrames_quimicos
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: carga_datos_pq_derrames_quimicos
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transformacion_derrames_quimicos
+  uuid: carga_datos_pq_derrames_quimicos
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: carga_datos_derrames_qumicos
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transformacion_derrames_quimicos
+  uuid: carga_datos_derrames_qumicos
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - transform_data_tiraderos
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ingesta_tiraderos_clandestinos_cdmx
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: ingesta_tiraderos_clandestinos_cdmx
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - carga_datos_tiraderos
+  - carga_datos_pq_tiraderos_clandestinos
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: transform_data_tiraderos
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - ingesta_tiraderos_clandestinos_cdmx
+  uuid: transform_data_tiraderos
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: carga_datos_pq_tiraderos_clandestinos
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transform_data_tiraderos
+  uuid: carga_datos_pq_tiraderos_clandestinos
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: carga_datos_tiraderos
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transform_data_tiraderos
+  uuid: carga_datos_tiraderos
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - transform_data_contaminacion_agua
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ingesta_contaminacion_agua_cdmx
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: ingesta_contaminacion_agua_cdmx
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - carga_datos_contaminacion_agua
+  - carga_datos_pq_contaminacion_agua
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: transform_data_contaminacion_agua
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - ingesta_contaminacion_agua_cdmx
+  uuid: transform_data_contaminacion_agua
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: carga_datos_pq_contaminacion_agua
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transform_data_contaminacion_agua
+  uuid: carga_datos_pq_contaminacion_agua
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: carga_datos_contaminacion_agua
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transform_data_contaminacion_agua
+  uuid: carga_datos_contaminacion_agua
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - transformacion_datos_redma
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: ingesta_datos_redma
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: ingesta_datos_redma
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - carga_datos_redma
+  - carga_datos_pq_redma
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: transformacion_datos_redma
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - ingesta_datos_redma
+  uuid: transformacion_datos_redma
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: carga_datos_pq_redma
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transformacion_datos_redma
+  uuid: carga_datos_pq_redma
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: carga_datos_redma
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - transformacion_datos_redma
+  uuid: carga_datos_redma
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-05-21 06:13:25.625493+00:00'
+data_integration: null
+description: ETL para el problema prototipico
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: pp_mineria_basura_cdmx
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags:
+- pp
+- cdmx
+- basura
+- aire
+- agua
+- contaminacion
+type: python
+uuid: pp_mineria_basura_cdmx
+variables:
+  db_uri: postgresql://postgres:123456@192.168.100.47:5432/dw_pp_basura
+  schema_name: cdmx_monitor
+variables_dir: C:\Users\kiramishima/.mage_data\pp_basura
+widgets: []

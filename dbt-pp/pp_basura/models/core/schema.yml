@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: silver
+    schema: 'cdmx_monitor'
+    tables:
+      - name: silver_contaminacion_agua
+      - name: silver_derrames_quimicos
+      - name: silver_rama_redman
+      - name: silver_reportes_paot
+      - name: silver_rios_cdmx
+      - name: silver_tiraderos_clandestinos
